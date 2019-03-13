@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# You can skip this part if you are using CentOs. This part is required for RHEL versions.
 cd /tmp
 sudo wget http://mirrors.nju.edu.cn/gnu/autoconf-archive/autoconf-archive-2019.01.06.tar.xz
 sudo tar xf autoconf-archive-2019.01.06.tar.xz 
@@ -7,7 +8,7 @@ cd autoconf-archive-2019.01.06
 sudo ./configure && make && make install
 sudo cp ./m4/* /usr/share/aclocal/
 
-
+# People using CentOs can start from here
 cd /opt
 sudo yum -y update
 sudo yum -y install libstdc++ autoconf automake libtool autoconf-archive pkg-config gcc gcc-c++ make libjpeg-devel libpng-devel libtiff-devel zlib-devel
